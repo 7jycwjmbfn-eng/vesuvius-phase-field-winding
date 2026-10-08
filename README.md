@@ -1,6 +1,6 @@
 # Phase-field sheet extraction for PHerc. Paris 4
 
-Status: research code and results as of 2026-10-08, published before the end of the Vesuvius Challenge progress prize period (2026-10-31). The readings are development readings; the limits are listed at the end of this file and in `docs/RESULTS.md`. The model weights are not in this repository yet.
+Status: research code and results as of 2026-10-08, published before the end of the Vesuvius Challenge progress prize period (2026-10-31). The readings are development readings; the limits are listed at the end of this file and in `docs/RESULTS.md`. The model weights are on Hugging Face: https://huggingface.co/qizhiran/vesuvius-phase-field-winding (CC BY-NC-SA 4.0).
 
 This code predicts, for every voxel of a scroll CT, the phase of the papyrus sheet it belongs to (0 at the sheet centre, 2 pi at the next sheet outward). Unwrapping that phase gives an integer sheet index, and the level sets of the unwrapped field are surface pieces that follow one sheet each. The output is a set of surfaces in the community tifxyz format, plus flattened CT renderings in which the papyrus fibres are visible.
 
@@ -130,4 +130,4 @@ The scripts are research code as they were run. They need Python 3.12, PyTorch w
 
 ## License
 
-Code and documentation: MIT (`LICENSE`). The model weights (`frozen_8c.pt`, `v6_resenc_ema_final.pt`) are not included in this repository; when released they will carry CC BY-NC-SA 4.0 because they are trained on the Vesuvius Challenge open data. No file of the PCU repository is redistributed here: `results/pcu_*.log` contain only numbers computed from its published per-pair rows.
+Code and documentation: MIT (`LICENSE`). The model weights (`frozen_8c.pt`, `v6_resenc_ema_final.pt`, the counter network and the stack) are not in this repository; they are at https://huggingface.co/qizhiran/vesuvius-phase-field-winding under CC BY-NC-SA 4.0 because they are trained on the Vesuvius Challenge open data, which is distributed by default under CC BY-NC 4.0. No file of the PCU repository is redistributed here: `results/pcu_*.log` contain only numbers computed from its published per-pair rows.
