@@ -1,0 +1,53 @@
+PCU pairs 3966; matched to our pairs 3625 (91.4%); by step: 1: 1359/1502, 2: 1207/1320, 3: 1059/1144
+unmatched PCU pairs per step include ladders excluded from our set (training z 9984-10500, regions touching the truth box) and pairs longer than 255 voxels; PCU certified share of matched vs unmatched: 53.2% / 50.1%
+
+=== PCU rule re-derived on the matched pairs (full-set values: 70.0% / 99.62%, 48% / 98.58%, 36% / 94.89%)
+  PCU, step 1                        n  1359 certified   961 ( 70.7%) precision  99.58% (4 errors; Wilson low 98.9%)
+  PCU, step 2                        n  1207 certified   585 ( 48.5%) precision  98.46% (9 errors; Wilson low 97.1%)
+  PCU, step 3                        n  1059 certified   382 ( 36.1%) precision  94.50% (21 errors; Wilson low 91.7%)
+
+=== our rules on the same pairs (thresholds from the other folds, common to steps 1-4)
+  counter+GBM stack (99% target), step 1 n  1359 certified  1180 ( 86.8%) precision  99.75% (3 errors; Wilson low 99.3%)
+  counter+GBM stack (99% target), step 2 n  1207 certified   765 ( 63.4%) precision  97.91% (16 errors; Wilson low 96.6%)
+  counter+GBM stack (99% target), step 3 n  1059 certified   583 ( 55.1%) precision  97.60% (14 errors; Wilson low 96.0%)
+  stack (98% target), step 1         n  1359 certified  1280 ( 94.2%) precision  99.38% (8 errors; Wilson low 98.8%)
+  stack (98% target), step 2         n  1207 certified   989 ( 81.9%) precision  97.27% (27 errors; Wilson low 96.1%)
+  stack (98% target), step 3         n  1059 certified   780 ( 73.7%) precision  95.64% (34 errors; Wilson low 94.0%)
+  stack (99.5% target), step 1       n  1359 certified   852 ( 62.7%) precision  99.77% (2 errors; Wilson low 99.1%)
+  stack (99.5% target), step 2       n  1207 certified   409 ( 33.9%) precision  99.02% (4 errors; Wilson low 97.5%)
+  stack (99.5% target), step 3       n  1059 certified   254 ( 24.0%) precision  98.43% (4 errors; Wilson low 96.0%)
+  GBM certifier (99% target), step 1 n  1359 certified   930 ( 68.4%) precision 100.00% (0 errors; Wilson low 99.6%)
+  GBM certifier (99% target), step 2 n  1207 certified   405 ( 33.6%) precision  99.01% (4 errors; Wilson low 97.5%)
+  GBM certifier (99% target), step 3 n  1059 certified   236 ( 22.3%) precision  98.31% (4 errors; Wilson low 95.7%)
+  counter network alone (98%), step 1 n  1359 certified  1321 ( 97.2%) precision  99.17% (11 errors; Wilson low 98.5%)
+  counter network alone (98%), step 2 n  1207 certified   981 ( 81.3%) precision  97.25% (27 errors; Wilson low 96.0%)
+  counter network alone (98%), step 3 n  1059 certified   769 ( 72.6%) precision  96.62% (26 errors; Wilson low 95.1%)
+
+=== overlap of the PCU certificate and the stack (99% target)
+  step 1: both 883 (both right 882, PCU wrong 1, stack wrong 0, counts differ 1); only PCU 78 (right 75); only stack 297 (right 294); neither 101
+  step 2: both 414 (both right 413, PCU wrong 1, stack wrong 1, counts differ 0); only PCU 171 (right 163); only stack 351 (right 336); neither 271
+  step 3: both 226 (both right 221, PCU wrong 5, stack wrong 5, counts differ 1); only PCU 156 (right 140); only stack 357 (right 348); neither 320
+
+=== combined rules (step-wise)
+   union (PCU count first), step 1    n  1359 certified  1258 ( 92.6%) precision  99.44% (7 errors; Wilson low 98.9%)
+   agreement (both certify, same count), step 1 n  1359 certified   882 ( 64.9%) precision 100.00% (0 errors; Wilson low 99.6%)
+   union (PCU count first), step 2    n  1207 certified   936 ( 77.5%) precision  97.44% (24 errors; Wilson low 96.2%)
+   agreement (both certify, same count), step 2 n  1207 certified   414 ( 34.3%) precision  99.76% (1 errors; Wilson low 98.6%)
+   union (PCU count first), step 3    n  1059 certified   739 ( 69.8%) precision  95.94% (30 errors; Wilson low 94.3%)
+   agreement (both certify, same count), step 3 n  1059 certified   225 ( 21.2%) precision  98.22% (4 errors; Wilson low 95.5%)
+
+=== precision of our rules at PCU's coverage per step (ranking by out-of-fold probability within the step, in-sample cut)
+  stack    step 1: top 961 of 1359 (70.7%): precision 99.79% (2 errors)  [PCU: 99.58%]
+  stack    step 2: top 585 of 1207 (48.5%): precision 98.97% (6 errors)  [PCU: 98.46%]
+  stack    step 3: top 382 of 1059 (36.1%): precision 98.95% (4 errors)  [PCU: 94.50%]
+  GBM      step 1: top 961 of 1359 (70.7%): precision 99.90% (1 errors)  [PCU: 99.58%]
+  GBM      step 2: top 585 of 1207 (48.5%): precision 97.61% (14 errors)  [PCU: 98.46%]
+  GBM      step 3: top 382 of 1059 (36.1%): precision 96.86% (12 errors)  [PCU: 94.50%]
+  counter  step 1: top 961 of 1359 (70.7%): precision 99.38% (6 errors)  [PCU: 99.58%]
+  counter  step 2: top 585 of 1207 (48.5%): precision 98.97% (6 errors)  [PCU: 98.46%]
+  counter  step 3: top 382 of 1059 (36.1%): precision 98.95% (4 errors)  [PCU: 94.50%]
+
+=== bootstrap over collections (ladders), 2000 draws: stack(99% target) minus PCU
+  step 1: coverage difference +16.1 points (95% +12.0 to +20.3); precision difference +0.16 points (95% -0.32 to +0.68)
+  step 2: coverage difference +14.8 points (95% +10.1 to +19.7); precision difference -0.57 points (95% -1.72 to +0.45)
+  step 3: coverage difference +18.8 points (95% +12.2 to +25.2); precision difference +3.03 points (95% +0.18 to +6.21)

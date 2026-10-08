@@ -1,0 +1,84 @@
+{
+ "description": "held-out human ladders for box A (L2 z 10496-11008); PCU e31b rule (ptp z<=2, Z0+20<=mean z<Z1-20)",
+ "window_z": [
+  10496,
+  11008
+ ],
+ "box_xy": [
+  3328,
+  6400,
+  1920,
+  4992
+ ],
+ "main": {
+  "ids": [
+   "rel:100",
+   "rel:166",
+   "rel:167",
+   "rel:171",
+   "rel:173",
+   "rel:174",
+   "rel:98",
+   "rel:99"
+  ],
+  "n_ladders": 8,
+  "n_pairs": 41
+ },
+ "sensitivity": {
+  "ids": [
+   "rel:100",
+   "rel:166",
+   "rel:167",
+   "rel:168",
+   "rel:169",
+   "rel:171",
+   "rel:173",
+   "rel:174",
+   "rel:98",
+   "rel:99"
+  ],
+  "n_ladders": 10,
+  "n_pairs": 48
+ },
+ "armH_excluded_ids": [
+  "rel:100",
+  "rel:166",
+  "rel:167",
+  "rel:168",
+  "rel:169",
+  "rel:171",
+  "rel:173",
+  "rel:174",
+  "rel:98",
+  "rel:99"
+ ],
+ "armH_ladder_ids": [
+  "rel:102",
+  "rel:148",
+  "rel:164",
+  "rel:175",
+  "rel:176",
+  "rel:265",
+  "rel:269",
+  "rel:270",
+  "rel:271",
+  "rel:272",
+  "rel:273",
+  "rel:274"
+ ],
+ "id_format": "'rel:<collection id>' in layerjudge/relative_windings.json, 'abs:<id>' in abs_winding.json",
+ "source_sha256": {
+  "relative_windings.json": "a3243511d4eb91387a9b32f4dbff11514b08c3ae36e9b2a2b8222607b4883ac1",
+  "abs_winding.json": "4e566731f7cbaf8f5ec843de687b3f72f4a784c40b587ebbaf544550902172c1"
+ },
+ "armH_file": {
+  "n_collections": 12,
+  "n_points": 78
+ },
+ "armH_min_dist_to_heldout_points": {
+  "min": 148.08543159158958,
+  "median": 270.64259660193557,
+  "frac_lt_100": 0.0,
+  "frac_lt_50": 0.0
+ }
+}

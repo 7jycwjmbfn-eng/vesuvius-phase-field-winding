@@ -1,0 +1,51 @@
+=== 1. harder band (PCU: fit gain absent; local count 92.0% vs 98.2%, certified 51% vs 78%): z2 11000-12000 = z3 5500-6000; band 1 z3 4200-4700
+band 1 (z2 8400-9400) step 1:
+    PCU                    n  394 certified  308 ( 78.2%) precision  99.68% (1 err)
+    stack 99% target       n  394 certified  340 ( 86.3%) precision 100.00% (0 err)
+    GBM 99% target         n  394 certified  258 ( 65.5%) precision 100.00% (0 err)
+band 1 (z2 8400-9400) step 2:
+    PCU                    n  362 certified  184 ( 50.8%) precision  98.91% (2 err)
+    stack 99% target       n  362 certified  243 ( 67.1%) precision  97.53% (6 err)
+    GBM 99% target         n  362 certified  114 ( 31.5%) precision  98.25% (2 err)
+band 1 (z2 8400-9400) step 3:
+    PCU                    n  330 certified  124 ( 37.6%) precision  92.74% (9 err)
+    stack 99% target       n  330 certified  191 ( 57.9%) precision  98.43% (3 err)
+    GBM 99% target         n  330 certified   66 ( 20.0%) precision 100.00% (0 err)
+band 2 (z2 11000-12000) step 1:
+    PCU                    n  200 certified  102 ( 51.0%) precision  98.04% (2 err)
+    stack 99% target       n  200 certified  161 ( 80.5%) precision  99.38% (1 err)
+    GBM 99% target         n  200 certified  130 ( 65.0%) precision 100.00% (0 err)
+band 2 (z2 11000-12000) step 2:
+    PCU                    n  165 certified   59 ( 35.8%) precision  98.31% (1 err)
+    stack 99% target       n  165 certified   92 ( 55.8%) precision  96.74% (3 err)
+    GBM 99% target         n  165 certified   50 ( 30.3%) precision 100.00% (0 err)
+band 2 (z2 11000-12000) step 3:
+    PCU                    n  132 certified   32 ( 24.2%) precision 100.00% (0 err)
+    stack 99% target       n  132 certified   65 ( 49.2%) precision  96.92% (2 err)
+    GBM 99% target         n  132 certified   20 ( 15.2%) precision 100.00% (0 err)
+
+=== 2. dense regions (short pairs = small wrap spacing), step 1; PCU table: <96 um 33% certified, 96-134 70%
+<96 um      PCU                    n   45 certified   16 ( 35.6%) precision 100.00% (0  | n   45 certified   38 ( 84.4%) precision 100.00% (0 err)
+96-134 um   PCU                    n  188 certified  128 ( 68.1%) precision 100.00% (0  | n  188 certified  178 ( 94.7%) precision 100.00% (0 err)
+134-173 um  PCU                    n  216 certified  153 ( 70.8%) precision 100.00% (0  | n  216 certified  201 ( 93.1%) precision  99.50% (1 err)
+173-230 um  PCU                    n  315 certified  240 ( 76.2%) precision  99.58% (1  | n  315 certified  272 ( 86.3%) precision 100.00% (0 err)
+>230 um     PCU                    n  595 certified  424 ( 71.3%) precision  99.29% (3  | n  595 certified  491 ( 82.5%) precision  99.59% (2 err)
+
+=== 3. pairs where PCU certifies a wrong count (all three Lasagna measurements agree on a wrong integer): what do we say?
+step 1: PCU wrong-certified 4; counter right 2, GBM right 2; stack certifies 1 of them (right 1); PCU said [2]
+step 2: PCU wrong-certified 9; counter right 6, GBM right 1; stack certifies 1 of them (right 0); PCU said [1, 3]
+step 3: PCU wrong-certified 21; counter right 7, GBM right 2; stack certifies 5 of them (right 0); PCU said [2, 4]
+
+=== 4. the error that hurts a fit most: a multi-wrap pair certified with fewer wraps (PCU: 1 of 636 two-wrap pairs certified as one on Paris 4; 5-8% on PHerc0139)
+step 2: PCU certified 585, with count < true 1; stack certified 765, count < true 9; counter count==1 among stack-certified: 9
+step 3: PCU certified 382, with count < true 8; stack certified 583, count < true 7; counter count==1 among stack-certified: 2
+
+=== 5. long spans (PCU: certifies one wrap at a time; precision falls with distance; crest graph 5-9 apart 88.8%, 20+ apart 54%): counter network on pairs of 4-8 wraps
+true wraps 4-4, target 99% (threshold from the other folds, same wrap range): pairs 1186, certified 415 (35.0%), precision 98.80% (5 wrong, 1 with fewer wraps than true)
+true wraps 4-4, target 98% (threshold from the other folds, same wrap range): pairs 1186, certified 669 (56.4%), precision 98.06% (13 wrong, 4 with fewer wraps than true)
+true wraps 5-6, target 99% (threshold from the other folds, same wrap range): pairs 1895, certified 138 (7.3%), precision 93.48% (9 wrong, 0 with fewer wraps than true)
+true wraps 5-6, target 98% (threshold from the other folds, same wrap range): pairs 1895, certified 414 (21.8%), precision 95.17% (20 wrong, 5 with fewer wraps than true)
+true wraps 7-8, target 99% (threshold from the other folds, same wrap range): pairs 1284, certified 361 (28.1%), precision 97.78% (8 wrong, 6 with fewer wraps than true)
+true wraps 7-8, target 98% (threshold from the other folds, same wrap range): pairs 1284, certified 494 (38.5%), precision 96.96% (15 wrong, 12 with fewer wraps than true)
+true wraps 5-8, target 99% (threshold from the other folds, same wrap range): pairs 3179, certified 223 (7.0%), precision 95.52% (10 wrong, 0 with fewer wraps than true)
+true wraps 5-8, target 98% (threshold from the other folds, same wrap range): pairs 3179, certified 963 (30.3%), precision 96.99% (29 wrong, 12 with fewer wraps than true)

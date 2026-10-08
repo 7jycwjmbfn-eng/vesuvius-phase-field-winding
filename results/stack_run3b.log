@@ -1,0 +1,29 @@
+C:\Users\hp\AppData\Local\Programs\Python\Python312\Lib\site-packages\numpy\lib\_nanfunctions_impl.py:1396: RuntimeWarning: All-NaN slice encountered
+  return _nanquantile_unchecked(
+
+=== overall precision target 98.0% (pairs 5943 of 1-4 windings; thresholds from the other folds)
+  counter : coverage 73.0% (70.1-75.8), precision 97.86% (96.7-98.8); 1-wrap 97.6%/99.2% (missed 5); 2-wrap 72.7%/97.2% (missed 22); 3-wrap 56.0%/96.6% (missed 16); 4-wrap 55.3%/97.0% (missed 5)
+  GBM     : coverage 51.7% (48.8-54.2), precision 98.05% (97.2-98.8); 1-wrap 76.3%/99.3% (missed 0); 2-wrap 48.0%/97.2% (missed 13); 3-wrap 36.4%/96.2% (missed 11); 4-wrap 36.9%/97.5% (missed 5)
+  agree   : coverage 61.9% (58.8-64.6), precision 98.07% (97.1-99.1); 1-wrap 82.7%/99.3% (missed 0); 2-wrap 61.2%/98.0% (missed 8); 3-wrap 48.7%/96.2% (missed 10); 4-wrap 46.5%/97.1% (missed 6)
+  stack   : coverage 79.8% (77.7-81.7), precision 97.85% (97.0-98.8); 1-wrap 94.4%/99.1% (missed 2); 2-wrap 80.7%/97.5% (missed 15); 3-wrap 67.4%/95.7% (missed 19); 4-wrap 70.7%/98.2% (missed 15)
+
+=== overall precision target 99.0% (pairs 5943 of 1-4 windings; thresholds from the other folds)
+  counter : coverage 0.0% (0.0-0.0), precision nan% (nan-nan); 1-wrap 0.0%/nan% (missed 0); 2-wrap 0.0%/nan% (missed 0); 3-wrap 0.0%/nan% (missed 0); 4-wrap 0.0%/nan% (missed 0)
+  GBM     : coverage 38.1% (35.6-40.9), precision 99.03% (98.3-99.6); 1-wrap 67.1%/99.8% (missed 0); 2-wrap 32.4%/98.2% (missed 5); 3-wrap 21.9%/97.0% (missed 5); 4-wrap 19.9%/99.2% (missed 1)
+  agree   : coverage 47.7% (44.9-51.0), precision 98.91% (98.1-99.6); 1-wrap 74.3%/99.5% (missed 0); 2-wrap 43.3%/98.4% (missed 5); 3-wrap 31.0%/97.9% (missed 2); 4-wrap 32.0%/98.9% (missed 0)
+  stack   : coverage 60.4% (57.1-63.4), precision 98.86% (98.3-99.5); 1-wrap 82.1%/99.9% (missed 0); 2-wrap 58.1%/97.9% (missed 10); 3-wrap 43.2%/97.1% (missed 8); 4-wrap 50.2%/99.5% (missed 3)
+
+=== overall precision target 99.5% (pairs 5943 of 1-4 windings; thresholds from the other folds)
+  counter : coverage 0.0% (0.0-0.0), precision nan% (nan-nan); 1-wrap 0.0%/nan% (missed 0); 2-wrap 0.0%/nan% (missed 0); 3-wrap 0.0%/nan% (missed 0); 4-wrap 0.0%/nan% (missed 0)
+  GBM     : coverage 21.9% (20.0-24.4), precision 99.31% (98.3-99.9); 1-wrap 47.4%/99.9% (missed 0); 2-wrap 16.0%/98.8% (missed 1); 3-wrap 8.1%/97.3% (missed 1); 4-wrap 6.8%/97.5% (missed 1)
+  agree   : coverage 25.5% (21.9-28.9), precision 99.21% (98.3-99.9); 1-wrap 39.5%/99.7% (missed 0); 2-wrap 25.5%/99.0% (missed 1); 3-wrap 16.4%/98.2% (missed 0); 4-wrap 14.4%/98.8% (missed 0)
+  stack   : coverage 33.0% (30.3-36.2), precision 99.23% (98.6-99.8); 1-wrap 55.1%/99.8% (missed 0); 2-wrap 30.6%/98.6% (missed 3); 3-wrap 20.7%/97.9% (missed 1); 4-wrap 16.5%/100.0% (missed 0)
+
+=== one-wrap pairs by z band and in total (PCU-style rows), target 99.0% / 99.5% overall (thresholds from the other folds)
+  target 99.0%, z 8400-9400 (n=468): GBM: coverage 64.1% precision 100.00% (0 errors of 300); stack: coverage 82.3% precision 100.00% (0 errors of 385)
+  target 99.0%, z 11000-12000 (n=247): GBM: coverage 65.6% precision 100.00% (0 errors of 162); stack: coverage 76.9% precision 100.00% (0 errors of 190)
+  target 99.0%, z 0-99999 (n=1810): GBM: coverage 67.1% precision 99.84% (2 errors of 1215); stack: coverage 82.1% precision 99.87% (2 errors of 1486)
+  target 99.5%, z 8400-9400 (n=468): GBM: coverage 44.9% precision 100.00% (0 errors of 210); stack: coverage 53.0% precision 100.00% (0 errors of 248)
+  target 99.5%, z 11000-12000 (n=247): GBM: coverage 46.2% precision 100.00% (0 errors of 114); stack: coverage 52.6% precision 100.00% (0 errors of 130)
+  target 99.5%, z 0-99999 (n=1810): GBM: coverage 47.4% precision 99.88% (1 errors of 858); stack: coverage 55.1% precision 99.80% (2 errors of 997)
+dumped 10143 pairs

@@ -1,0 +1,27 @@
+
+=== overall precision target 98.0% (pairs 5943 of 1-4 windings; thresholds from the other folds)
+  counter : coverage 73.9% (71.3-76.4), precision 97.81% (96.6-98.9); 1-wrap 95.0%/99.2% (missed 6); 2-wrap 73.7%/97.1% (missed 21); 3-wrap 61.2%/96.9% (missed 13); 4-wrap 56.5%/96.7% (missed 7)
+  GBM     : coverage 51.7% (48.8-54.2), precision 98.05% (97.2-98.8); 1-wrap 76.3%/99.3% (missed 0); 2-wrap 48.0%/97.2% (missed 13); 3-wrap 36.4%/96.2% (missed 11); 4-wrap 36.9%/97.5% (missed 5)
+  agree   : coverage 62.3% (59.2-65.2), precision 98.11% (97.1-99.0); 1-wrap 82.7%/99.3% (missed 0); 2-wrap 62.0%/97.9% (missed 10); 3-wrap 49.8%/96.5% (missed 9); 4-wrap 46.1%/97.3% (missed 5)
+  stack   : coverage 79.1% (76.6-81.4), precision 97.79% (96.8-98.6); 1-wrap 92.2%/99.3% (missed 2); 2-wrap 77.8%/97.3% (missed 17); 3-wrap 69.7%/95.4% (missed 19); 4-wrap 71.7%/98.2% (missed 14)
+
+=== overall precision target 99.0% (pairs 5943 of 1-4 windings; thresholds from the other folds)
+  counter : coverage 0.2% (0.1-0.3), precision 91.67% (76.3-100.0); 1-wrap 0.0%/nan% (missed 0); 2-wrap 0.0%/nan% (missed 0); 3-wrap 0.0%/nan% (missed 0); 4-wrap 1.0%/91.7% (missed 0)
+  GBM     : coverage 38.1% (35.6-40.9), precision 99.03% (98.3-99.6); 1-wrap 67.1%/99.8% (missed 0); 2-wrap 32.4%/98.2% (missed 5); 3-wrap 21.9%/97.0% (missed 5); 4-wrap 19.9%/99.2% (missed 1)
+  agree   : coverage 46.0% (43.4-49.0), precision 98.94% (98.2-99.6); 1-wrap 72.8%/99.5% (missed 0); 2-wrap 41.1%/98.6% (missed 5); 3-wrap 30.1%/97.8% (missed 2); 4-wrap 30.1%/98.6% (missed 0)
+  stack   : coverage 53.8% (50.6-57.2), precision 98.69% (98.0-99.4); 1-wrap 75.6%/99.7% (missed 1); 2-wrap 51.6%/98.0% (missed 8); 3-wrap 39.6%/96.5% (missed 7); 4-wrap 40.1%/99.4% (missed 3)
+
+=== overall precision target 99.5% (pairs 5943 of 1-4 windings; thresholds from the other folds)
+  counter : coverage 0.2% (0.1-0.3), precision 91.67% (76.3-100.0); 1-wrap 0.0%/nan% (missed 0); 2-wrap 0.0%/nan% (missed 0); 3-wrap 0.0%/nan% (missed 0); 4-wrap 1.0%/91.7% (missed 0)
+  GBM     : coverage 21.9% (20.0-24.4), precision 99.31% (98.3-99.9); 1-wrap 47.4%/99.9% (missed 0); 2-wrap 16.0%/98.8% (missed 1); 3-wrap 8.1%/97.3% (missed 1); 4-wrap 6.8%/97.5% (missed 1)
+  agree   : coverage 36.5% (34.1-39.5), precision 99.49% (98.8-99.9); 1-wrap 66.7%/99.8% (missed 0); 2-wrap 29.4%/99.1% (missed 1); 3-wrap 20.2%/98.9% (missed 0); 4-wrap 18.6%/99.1% (missed 0)
+  stack   : coverage 22.8% (18.6-27.6), precision 99.11% (98.2-99.9); 1-wrap 36.1%/99.8% (missed 0); 2-wrap 18.3%/97.9% (missed 1); 3-wrap 16.1%/98.2% (missed 1); 4-wrap 16.2%/99.5% (missed 1)
+
+=== one-wrap pairs by z band and in total (PCU-style rows), target 99.0% / 99.5% overall (thresholds from the other folds)
+  target 99.0%, z 8400-9400 (n=468): GBM: coverage 64.1% precision 100.00% (0 errors of 300); stack: coverage 74.4% precision 100.00% (0 errors of 348)
+  target 99.0%, z 11000-12000 (n=247): GBM: coverage 65.6% precision 100.00% (0 errors of 162); stack: coverage 70.9% precision 99.43% (1 errors of 175)
+  target 99.0%, z 0-99999 (n=1810): GBM: coverage 67.1% precision 99.84% (2 errors of 1215); stack: coverage 75.6% precision 99.71% (4 errors of 1368)
+  target 99.5%, z 8400-9400 (n=468): GBM: coverage 44.9% precision 100.00% (0 errors of 210); stack: coverage 28.0% precision 100.00% (0 errors of 131)
+  target 99.5%, z 11000-12000 (n=247): GBM: coverage 46.2% precision 100.00% (0 errors of 114); stack: coverage 27.9% precision 100.00% (0 errors of 69)
+  target 99.5%, z 0-99999 (n=1810): GBM: coverage 47.4% precision 99.88% (1 errors of 858); stack: coverage 36.1% precision 99.85% (1 errors of 653)
+dumped 10143 pairs
