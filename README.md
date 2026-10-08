@@ -6,6 +6,19 @@ This code predicts, for every voxel of a scroll CT, the phase of the papyrus she
 
 Scroll and region: PHerc. Paris 4, level 2 (9.6 um) data, region W2 and the boxes around the umbilicus described below.
 
+## Quick check (CPU, a few minutes, numpy and torch only)
+
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/7jycwjmbfn-eng/vesuvius-phase-field-winding/blob/main/notebooks/quickstart.ipynb)
+
+```
+git clone https://github.com/7jycwjmbfn-eng/vesuvius-phase-field-winding && cd vesuvius-phase-field-winding
+pip install numpy torch
+python examples/count_windings.py     # downloads the 3 MB weights; counts the windings of 9 sample point pairs
+python src/compare_pcu.py             # downloads PCU's published per-pair rows; reproduces the matched-pair comparison
+```
+
+The first command shows the winding-count network on 9 point pairs with known counts. The second reruns the comparison with the PCU certificate on the 3,625 matched pairs from `results/pairs_oof.npz` (our out-of-fold per-pair predictions). Everything else in `src/` needs CT, surface prediction and Lasagna arrays (several GB) and has hard-coded paths (`docs/PATHS.md`); `AGENTS.md` tells an AI assistant what can and cannot be run.
+
 Terms. A relative-winding annotation is a point collection in which numbered points give the number of windings between them (the files `relative_windings.json` of the public spiral dataset; the PCU report calls such a line a ladder). A generated constraint is a point collection of the same kind written by this code. The segment-label field is the winding label derived from the official segments. Names without an official equivalent are this project's own: winding-count network (a network that outputs the number of windings between two points), combined certifier (the winding-count network and a gradient-boosting certifier combined by a further gradient-boosting model, a stacking step), strict subset (generated constraints kept by link probability and confidence).
 
 ## What this repository shows, and what it does not
